@@ -27,7 +27,6 @@ mongoose
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
-    console.log('asdf');
     app.listen(3000);
   })
   .catch(err => {
