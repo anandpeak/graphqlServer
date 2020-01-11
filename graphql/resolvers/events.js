@@ -19,6 +19,7 @@ module.exports = {
     if (!req.isAuth) {
       throw new Error('UnAuthenticated');
     }
+
     const event = new Event({
       title: args.eventInput.title,
       description: args.eventInput.description,
@@ -41,6 +42,7 @@ module.exports = {
       }
 
       creatorUser.createdEvents.push(event);
+
       await creatorUser.save();
 
       return createdEvent;
