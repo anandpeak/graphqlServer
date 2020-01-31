@@ -43,9 +43,9 @@ const user = async userId => {
 const transformEvent = event => {
   return {
     ...event._doc,
-    date: dateToString(event._doc.date),
     _id: event.id,
-    creator: user.bind(this, event._doc.creator)
+    date: dateToString(event._doc.date),
+    creator: user.bind(this, event.creator)
   };
 };
 
